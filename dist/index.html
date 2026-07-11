@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Neural archive of Manish Pathak." />
+    <title>MANISH_PATHAK369 — Neural Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Michroma&family=Orbitron:wght@500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-D2rvn4Je.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DXXnD2GV.css">
+  </head>
+  <body>
+    <canvas id="neural-canvas" aria-hidden="true"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="noise" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true"></div>
+
+    <div id="boot-screen" class="screen boot-screen active">
+      <div class="boot-shell">
+        <div class="boot-title">INITIALIZING...</div>
+        <div id="boot-output" class="boot-output"></div>
+        <div class="boot-progress" aria-hidden="true">
+          <div id="boot-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="landing-screen" class="screen landing-screen hidden">
+      <div class="landing-shell">
+        <div class="landing-panel">
+          <div class="landing-media">
+            <img src="/assets/me-BruKSeeV.jpeg" alt="Manish Pathak portrait" />
+          </div>
+          <div class="landing-content">
+            <p class="landing-quote">“The sky is just the start.”</p>
+            <div class="handle">manish_pathak369</div>
+            <p class="landing-subtitle">Neural archive • specimen 369</p>
+            <button class="enter-button" id="enter-button">ENTER HIS MIND</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="transition-overlay" class="transition-overlay" aria-hidden="true">
+      <div class="transition-streak"></div>
+    </div>
+
+    <div id="app-shell" class="app-shell hidden" aria-live="polite">
+      <header class="top-bar">
+        <div class="top-bar__left">
+          <span class="label">FILE:</span>
+          <span>MANISH_PATHAK.SYS</span>
+        </div>
+        <div class="top-bar__center">
+          <span class="module-title" id="module-title">Activity Log</span>
+        </div>
+        <div class="top-bar__right">
+          <span class="status-pill"><span class="status-dot"></span> ALIVE</span>
+          <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <nav class="side-menu" id="side-menu" aria-label="Archive navigation">
+        <button class="nav-item" data-module="profile">Profile</button>
+        <button class="nav-item active" data-module="activity">Activity Log</button>
+        <button class="nav-item" data-module="habits">Habits</button>
+        <button class="nav-item" data-module="flashbacks">Flashbacks</button>
+        <button class="nav-item" data-module="transmission">Transmission</button>
+        <button class="nav-item" data-module="terminal">Terminal</button>
+        <div class="nav-divider"></div>
+        <button class="nav-item nav-item--muted" data-module="profile">Log Out</button>
+      </nav>
+
+      <main class="content-shell">
+        <section class="module active" data-module="activity">
+          <div class="module-header">
+            <div>
+              <p class="eyebrow">Archive Database</p>
+              <h2>Activity Log</h2>
+            </div>
+            <p class="module-copy">A chronicle of transmissions, builds, and signals.</p>
+          </div>
+          <div id="projects-grid" class="projects-grid"></div>
+        </section>
+
+        <section class="module" data-module="profile">
+          <div class="module-header">
+            <div>
+              <p class="eyebrow">Specimen File</p>
+              <h2>Profile</h2>
+            </div>
+            <p class="module-copy">The human behind the interface.</p>
+          </div>
+          <div class="profile-grid">
+            <div class="profile-card profile-card--hero">
+              <img class="profile-photo" src="/assets/me-BruKSeeV.jpeg" alt="Manish Pathak portrait" />
+              <div class="profile-meta">
+                <p class="profile-name" id="name-cycle">MANISH PATHAK</p>
+                <p class="profile-subtitle">AEROSPACE ENTHUSIAST</p>
+                <div class="profile-tabs">
+                  <button class="tab active" data-tab="story">MY STORY</button>
+                  <button class="tab" data-tab="mission">MY MISSION</button>
+                  <button class="tab" data-tab="vision">MY VISION</button>
+                </div>
+                <div id="profile-content" class="profile-content"></div>
+                <div class="profile-socials">
+                  <a href="https://www.instagram.com/manish_pathak369/" target="_blank" rel="noreferrer">Instagram</a>
+                  <a href="https://www.facebook.com/manish.pathak.316218/" target="_blank" rel="noreferrer">Facebook</a>
+                  <a href="https://github.com/Smoky369" target="_blank" rel="noreferrer">GitHub</a>
+                  <a href="https://www.linkedin.com/in/manish-pathak-3696133a1" target="_blank" rel="noreferrer">LinkedIn</a>
+                </div>
+                <div style="display: flex; gap: 0.8rem; margin-top: 1.25rem;">
+                  <button class="contact-button" id="contact-button" style="margin: 0; width: auto;">Open Contact Protocol</button>
+                  <a href="./images/cv.pdf" target="_blank" class="secondary-button" style="margin: 0; text-decoration: none; display: inline-flex; align-items: center; justify-content: center;">Retrieve CV</a>
+                </div>
+              </div>
+            </div>
+            <div class="profile-card certifications-card">
+              <div class="module-header module-header--compact">
+                <div>
+                  <p class="eyebrow">Credentials</p>
+                  <h2>Certifications</h2>
+                </div>
+              </div>
+              <div class="cert-list">
+                <article class="cert-item">
+                  <img src="/assets/cert10-C2GBs6tq.jpeg" alt="Certificate preview" />
+                  <div>
+                    <strong>SEE Marksheet</strong>
+                    <span>Advanced interface architecture and interaction systems</span>
+                  </div>
+                </article>
+                <article class="cert-item">
+                  <img src="/assets/aoc-DrGoNK6w.png" alt="Certificate preview" />
+                  <div>
+                    <strong>AOC 2025</strong>
+                    <span>Advent Of Cyber 2026 TryHackMe</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="module" data-module="transmission">
+          <div class="module-header">
+            <div>
+              <p class="eyebrow">Transmission</p>
+              <h2>Network Relay</h2>
+            </div>
+            <p class="module-copy">A living map of signals, communities, and contact points.</p>
+          </div>
+          <div class="network-card">
+            <div class="network-core">
+              <div class="core-node">M</div>
+              <button class="signal-node node-github" data-profile="GitHub" data-url="https://github.com/Smoky369" data-label="GitHub"><span>GitHub</span></button>
+              <button class="signal-node node-linkedin" data-profile="LinkedIn" data-url="https://www.linkedin.com/in/manish-pathak-3696133a1" data-label="LinkedIn"><span>LinkedIn</span></button>
+              <button class="signal-node node-instagram" data-profile="Instagram" data-url="https://www.instagram.com/manish_pathak369/" data-label="Instagram"><span>Instagram</span></button>
+              <button class="signal-node node-facebook" data-profile="Facebook" data-url="https://www.facebook.com/manish.pathak.316218/" data-label="Facebook"><span>Facebook</span></button>
+            </div>
+            <div class="signal-stack">
+              <div class="signal-details" id="signal-details">
+                <h3>Signal Profile</h3>
+                <p>Select a node to open a protocol.</p>
+              </div>
+              <form class="relay-form">
+                <label>
+                  <span>Name</span>
+                  <input type="text" placeholder="Name" />
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" placeholder="Email" />
+                </label>
+                <label>
+                  <span>Comment</span>
+                  <textarea rows="4" placeholder="Comment"></textarea>
+                </label>
+                <button class="copy-button" type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <section class="module" data-module="flashbacks">
+          <div class="module-header">
+            <div>
+              <p class="eyebrow">Memory Access</p>
+              <h2>Flashbacks</h2>
+            </div>
+            <p class="module-copy">Scans from orbit, code, and the quiet intervals between.</p>
+          </div>
+          <div class="gallery-shell">
+            <div class="gallery-track" id="gallery-track"></div>
+          </div>
+        </section>
+
+        <section class="module" data-module="habits">
+          <div class="module-header">
+            <div>
+              <p class="eyebrow">Protocols</p>
+              <h2>Habits</h2>
+            </div>
+            <p class="module-copy">A living dashboard of focus, discipline, and curiosity.</p>
+          </div>
+          <div class="habit-two-grid">
+            <div class="habit-card habit-card--large">
+              <h3>Book Reading</h3>
+              <p>A quiet archive of books, ideas, and pages that shaped the signal.</p>
+              <button class="secondary-button" id="books-button">Open Books Read</button>
+            </div>
+            <div class="habit-card habit-card--large habit-card--night">
+              <h3>Star Gazing</h3>
+              <p>Long pauses under open skies to decode direction and stillness.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="module" data-module="terminal">
+          <div class="module-header">
+            <div>
+              <p class="eyebrow">Terminal Protocol</p>
+              <h2>Command Shell</h2>
+            </div>
+            <p class="module-copy">An interactive command-line interface to query systems data.</p>
+          </div>
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">bash - pathak369manish@earth</span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div class="terminal-line" style="color: var(--muted);">Manish OS [Version 1.0.369]</div>
+              <div class="terminal-line" style="color: var(--muted); margin-bottom: 8px;">Type "help" to see available protocols.</div>
+              <div id="terminal-output"></div>
+              <div class="terminal-input-line">
+                <span class="terminal-prompt">guest@pathak369:~$</span>
+                <input type="text" id="terminal-input" autofocus autocomplete="off" spellcheck="false" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer hidden">
+      <div>
+        <p class="eyebrow">Identity</p>
+        <p>manish_pathak369</p>
+        <p style="font-size: 0.82rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.5; max-width: 250px;">A 17-year-old student learning technology on Earth while dreaming beyond it.</p>
+      </div>
+      <div>
+        <p class="eyebrow">Quick Navigation</p>
+        <ul>
+          <li><a href="#" data-module="profile">Profile</a></li>
+          <li><a href="#" data-module="activity">Activity Log</a></li>
+          <li><a href="#" data-module="transmission">Transmission</a></li>
+          <li><a href="#" data-module="flashbacks">Flashbacks</a></li>
+          <li><a href="#" data-module="habits">Habits</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow">Signal</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/manish_pathak369/" target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
+          <a href="https://www.facebook.com/manish.pathak.316218/" target="_blank" rel="noreferrer" aria-label="Facebook">📘</a>
+          <a href="https://github.com/Smoky369" target="_blank" rel="noreferrer" aria-label="GitHub">🐙</a>
+          <a href="https://www.linkedin.com/in/manish-pathak-3696133a1" target="_blank" rel="noreferrer" aria-label="LinkedIn">💼</a>
+        </div>
+      </div>
+      <p class="footer-note">Currently transmitting from Planet Earth.</p>
+    </footer>
+
+    <div id="modal-root" class="modal-root" aria-hidden="true">
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close">×</button>
+        <div id="modal-content"></div>
+      </div>
+    </div>
+
+  </body>
+</html>
