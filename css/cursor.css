@@ -1,0 +1,23 @@
+.cursor {
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(57,255,136,0.85);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  mix-blend-mode: screen;
+  transition: width 180ms ease, height 180ms ease, border-color 180ms ease, transform 180ms ease;
+  will-change: transform;
+}
+
+.cursor.is-hover {
+  width: 42px;
+  height: 42px;
+  border-color: var(--cyan);
+  border-radius: 10px;
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+body.cursor-hidden .cursor { opacity: 0; }
