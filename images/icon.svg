@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Manish Pathak icon</title>
+  <desc id="desc">A green orbit and star on a dark background</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#07140f"/>
+      <stop offset="1" stop-color="#010604"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#background)"/>
+  <circle cx="256" cy="256" r="156" fill="none" stroke="#1cff9b" stroke-width="13" opacity=".88"/>
+  <ellipse cx="256" cy="256" rx="212" ry="77" fill="none" stroke="#77ffd0" stroke-width="12" transform="rotate(-28 256 256)" opacity=".95"/>
+  <circle cx="386" cy="132" r="18" fill="#d7ffef" filter="url(#glow)"/>
+  <path d="M256 165 280 232 347 256 280 280 256 347 232 280 165 256 232 232Z" fill="#1cff9b" filter="url(#glow)"/>
+</svg>
